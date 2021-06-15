@@ -649,7 +649,7 @@ export default class App extends Component {
     this.interval = setInterval(() => this.getCoords(), 1000);
   }
 
-  async componentDidMount() {
+  async getCoords() {
     fetch('https://api.thingspeak.com/channels/1323137/feeds.json?results=1')
       .then((response) => response.json())
       .then((json) => {
